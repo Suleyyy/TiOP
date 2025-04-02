@@ -3,8 +3,7 @@ import numpy as np
 
 img = cv2.imread('img/obraz.jpg')
 added = cv2.add(img,50)
-intensity = np.uint8([50])
-added2 = cv2.add(img,intensity)
+added2 = img + np.uint8([50])
 cv2.imshow('obraz',added)
 cv2.imshow('obraz2',added2)
 
