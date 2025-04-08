@@ -3,9 +3,8 @@ import numpy as np
 
 img = cv2.imread("img/obraz.jfif")
 mask = np.zeros(img.shape[:2], np.uint8)
-cv2.rectangle(mask, (200,40), (290,120), 255,-1)
+cv2.rectangle(mask, (210,65), (270,80), 255, -1)
+img[mask == 255] = (0,0,0)
 
-masked = cv2.bitwise_or(img, img, mask=mask)
-
-cv2.imshow("masked", masked)
+cv2.imshow("masked", img)
 cv2.waitKey(0)
