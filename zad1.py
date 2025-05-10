@@ -21,6 +21,11 @@ for (diameter,sigmaColor,SigmaSpace) in params:
     cv2.imshow(f'bfilter{i}', bfilter)
     i +=1
 
+
 cv2.waitKey(0)
+
+#1.Najlepiej usuwa szum medianBlur
+#2.Najwięcej szczegółów zachowuje bilateralFilter
+#3.W zależności jaki efekt checmy osiągnąć, zaleta jednego sposobu będzie wadą u innego
 
 
